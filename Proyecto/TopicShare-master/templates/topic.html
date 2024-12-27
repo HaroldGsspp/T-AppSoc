@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1> {{ current_post.title}} </h1> 
+  {{current_post.showtime()}}
+  {{ current_post}}
+  <br>
+  {{ current_post.text }}  
+  <br>
+  <h1> Comment Section: </h1>
+  {% for i in comment_list %}
+    <div class="shadow p-5 my-5">
+      <h6> {{ i }} </h3>
+      <br>
+      {{ i.text }}
+      <br>
+    </div>
+  {% endfor %}
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.text.label }}
+      {{ form.text() }}
+    </div>
+    {{ form.submit() }}
+  </form>
+</div>
+{% with messages = get_flashed_messages() %} {% if messages %}
+  <script>
+    alert("{{ messages[0] }}");
+  </script>
+{% endif %} {% endwith %}
+{% endblock %}

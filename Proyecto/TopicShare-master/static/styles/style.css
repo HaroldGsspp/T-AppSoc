@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+.banner-image{
+  background-image: url("../images/back-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-group{
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.login-card{
+  padding: 200px;
+  width: 50%;
+  height: 100vh;/* 
+  background-color: blue */
+/*   border: solid red 1px;
+ */}
+
+ .reg {
+  margin: 10px;
+  /* Add additional CSS properties to move the object */
+  position: relative;
+  top: 5px;
+}
+
+footer.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.alert{
+  margin-top: 10px;
+}
+
+table{
+  margin-top: 10px;
+}
